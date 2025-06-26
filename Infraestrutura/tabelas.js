@@ -9,9 +9,9 @@ class Tabela {
         CREATE TABLE IF NOT EXISTS atendimentos (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     data DATE,
-    Serviço VARCHAR(100),
+    serviço VARCHAR(100),
     cliente VARCHAR(100),
-    STATUS ENUM('Ativo', 'Cancelado', 'Finalizado') DEFAULT 'Ativo'
+    status ENUM('Ativo', 'Cancelado', 'Finalizado') DEFAULT 'Ativo'
 );
         `;
     

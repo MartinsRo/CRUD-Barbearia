@@ -20,3 +20,13 @@ app.listen(port, (error) => {
     }
     console.log("Subiu!");
 }); 
+
+
+// ... outros requires
+const path = require('path'); // Adicione este require no topo
+
+// app.use(express.json());
+
+app.use(express.static(path.join(__dirname, 'public'))); // <-- ADICIONE ESTA LINHA
+
+tabelas.init(conexao);

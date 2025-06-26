@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia - Agendamentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agende o seu atendimento aqui</h1>
+
+        <div class="form-container">
+            <h2>Novo Agendamento</h2>
+            <form id="form-novo-atendimento">
+                <div class="form-group">
+                    <label for="cliente">Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Serviço:</label>
+                    <input type="text" id="servico" name="servico" required>
+                </div>
+                <div class="form-group">
+                    <label for="data">Data e Hora:</label>
+                    <input type="datetime-local" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Cancelado">Cancelado</option>
+                        <option value="Finalizado">Finalizado</option>
+                    </select>
+                </div>
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+
+        <div class="tabela-container">
+            <h2>Próximos Atendimentos</h2>
+            <table id="tabela-atendimentos">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
