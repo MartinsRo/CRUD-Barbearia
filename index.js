@@ -1,3 +1,4 @@
+//Esse é o arquivo principal para a inicialização do servidor.
 const express = require("express");
 const app = express();
 const port = 3000;

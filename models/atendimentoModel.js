@@ -1,7 +1,8 @@
 const conexao = require("../infraestrutura/conexao");
 
 class AtendimentoModel{
-    listar() {
+    //Função responsável por mostrar os agendamentos já criados.
+    listar() {  
         const sql = "SELECT * FROM atendimentos";
         return new Promise((resolve, reject) => { 
         conexao.query(sql , {}, (error, resposta) =>{
@@ -15,7 +16,8 @@ class AtendimentoModel{
     })
     }
 
-    criar(novoAtendimento) {
+    //Função responsável por criar um novo agendamento.
+    criar(novoAtendimento) {  
         const sql = "INSERT INTO atendimentos SET ?";
         return new Promise((resolve, reject) =>{
             conexao.query(sql, novoAtendimento, (error, resposta) =>{
@@ -29,6 +31,7 @@ class AtendimentoModel{
         })
     }
 
+    //Função responsável por atualizar o status de um agendamentos já criados.
     atualizar(atendimentoAtualizado, id) {
         const sql = "UPDATE atendimentos SET ? WHERE id = ?";
         return new Promise((resolve, reject) =>{
@@ -43,6 +46,7 @@ class AtendimentoModel{
         })
     }
 
+    //Função responsável por cancelar/excluir um agendamento.
     delete(id) {
     const sql = "DELETE FROM atendimentos WHERE id = ?";
     return new Promise((resolve, reject) =>{
